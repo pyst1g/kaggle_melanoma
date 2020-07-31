@@ -1,0 +1,15 @@
+/**/data
+/**/input
+/**/output
+/**/model
+/**/models
+/**/prepare_data
+/**/.ipynb_checkpoints/
+/**/__pycache__
+/**/lightning_logs
+*catboost_info/
+*.h5
+*.pkl
+*.pt
+*.npy
+*.csv
