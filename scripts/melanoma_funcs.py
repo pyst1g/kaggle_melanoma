@@ -18,16 +18,16 @@ def get_train_transforms(input_res):
     return A.Compose([
 #             A.JpegCompression(p=0.5),
             A.Rotate(limit=45, p=1.0),
-            A.OneOf([
-                A.OpticalDistortion(),
-                A.GridDistortion(),
-#                 A.IAAPiecewiseAffine(),
-            ]),
+#             A.OneOf([
+#                 A.OpticalDistortion(),
+#                 A.GridDistortion(),
+# #                 A.IAAPiecewiseAffine(),
+#             ]),
             A.RandomSizedCrop(min_max_height=(int(input_res*0.7), input_res),
                               height=int(input_res*0.85), width=int(input_res*0.85), p=1.0),
             A.HorizontalFlip(p=0.5),
             A.VerticalFlip(p=0.5),
-            A.GaussianBlur(p=0.3),
+#             A.GaussianBlur(p=0.3),
             A.OneOf([
                 A.RandomBrightnessContrast(),   
                 A.HueSaturationValue(),
